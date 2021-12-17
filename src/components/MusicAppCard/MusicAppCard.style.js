@@ -1,9 +1,23 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet,Dimensions } from "react-native";
 
 export default StyleSheet.create({
     image:{
-        height:100,
-        width:100,        
+        height: Dimensions.get('window').height/8,
+        width:Dimensions.get('window').width/4, 
+        margin:10,
+        backgroundColor:'yellow',       
+    },
+    container:{
+        backgroundColor:'white',
+        height: Dimensions.get('window').height/5,
+        maxWidth: Dimensions.get('window').width/1,
+        margin:10,
+        flex:1,
+        flexWrap:'nowrap',
+        flexDirection:'row',
+    },
+    image_container:{
+        margin:10,
     },
     
 

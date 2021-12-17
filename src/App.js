@@ -26,7 +26,7 @@ const styles = StyleSheet.create(
   container:{
     backgroundColor:'wheat',
     flex:1,
-    alignItems:'center',
+    // alignItems:'center',
     
   },
   headline:{

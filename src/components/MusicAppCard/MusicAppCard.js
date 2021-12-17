@@ -1,16 +1,15 @@
 import React from "react";
 import {View, Text,Image} from 'react-native';
 import Stock from "./Stock";
-import SearchBar from "./SearchBar";
 import styles from './MusicAppCard.style';
 
 const MusicAppCard = ({market}) => {
     return(
-        <View>
+        <View style={styles.container}>
            
-            <View>
+            <View style={styles.image_container}>
 
-            <Image
+            <Image resizeMode="center"
             style={styles.image}
             source={{uri: market.imageURL}}
             />

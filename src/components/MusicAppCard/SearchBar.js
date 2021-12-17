@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, TextInput } from "react-native";
+import { SafeAreaView, StyleSheet, TextInput, Dimensions } from "react-native";
 
 const SearchBar = () => {
   const [text, onChangeText] = React.useState("");
@@ -18,8 +18,8 @@ const SearchBar = () => {
 
 const styles = StyleSheet.create({
   input: {
-    height: 40,
-    width:120,
+    maxWidth:Dimensions.get('window').width, 
+    height:40,
     margin: 12,
     borderWidth: 1,
     padding: 10,
