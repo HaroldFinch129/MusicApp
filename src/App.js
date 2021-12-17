@@ -1,10 +1,18 @@
 import React from "react";
-import {View,Text, StyleSheet} from 'react-native';
+import {View,Text, StyleSheet, FlatList} from 'react-native';
+import MusicAppCard from "./components/MusicAppCard/MusicAppCard";
+import music_data from './music-data.json';
 
-const App = () => {
+const App = () => { 
+  const renderMusic = ({item}) => <MusicAppCard market={item}/>
   return(
     <View style={styles.container}>
       <Text style={styles.headline}>MusicApp</Text>
+      <FlatList
+      data={music_data}
+      renderItem={renderMusic}
+      />
+
     </View>
   )
 }
