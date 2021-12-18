@@ -26,11 +26,11 @@ const styles = StyleSheet.create(
   container:{
     backgroundColor:'wheat',
     flex:1,
-    // alignItems:'center',
+    alignItems:'center',
     
   },
   headline:{
-    color:'black',
+    color:'#151D52',
     fontSize:30,
     fontWeight:'bold',
 
