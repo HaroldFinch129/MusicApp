@@ -8,11 +8,12 @@ export default StyleSheet.create({
     width:100,
     borderRadius:50,
     // margin: 5,
-    // backgroundColor: 'yellow',
+    backgroundColor: 'yellow',
   },
   title:{
     fontSize:27,
     fontWeight:'bold',
+    color:'black',
   },
   container: {
 //     backgroundColor: 'white',

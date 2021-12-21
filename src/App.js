@@ -11,7 +11,7 @@ const App = () => {
     <View style={styles.container}>
       <Text style={styles.headline}>MusicApp</Text>
        <SearchBar/>
-      <FlatList
+      <FlatList 
       keyExtractor={item => item.id} 
       data={music_data}
       renderItem={renderMusic}
@@ -29,14 +29,14 @@ const styles = StyleSheet.create(
   container:{
     // backgroundColor:'wheat',
     flex:1,
-    // alignItems:'center',
+    
 
     
   },
   headline:{
-    // color:'#151D52',
-    // fontSize:30,
-    // fontWeight:'bold',
+    color:'#151D52',
+    fontSize:30,
+    fontWeight:'bold',
 
   },
   seperator:{
