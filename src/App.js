@@ -1,19 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import {View,Text, StyleSheet, FlatList} from 'react-native';
 import MusicAppCard from "./components/MusicAppCard/MusicAppCard";
 import music_data from './music-data.json';
-import SearchBar from "./components/MusicAppCard/SearchBar";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 const App = () => { 
+  const[list, setList]= useState(music_data);
+  
   const renderMusic = ({item}) => <MusicAppCard market={item}/>
   const renderSeperator = () => <View style={styles.seperator}></View>
+  const handleSearch = text => {
+    const filteredList = music_data.filter(song => {
+      const searchedText = text.toLowerCase();
+      const currentTitle = song.title.toLowerCase();
+      currentTitle.indexOf(searchedText);
+    });
+    setList(filteredList);
+  };
+
+
+  
   return(
     <View style={styles.container}>
       <Text style={styles.headline}>MusicApp</Text>
-       <SearchBar/>
+       <SearchBar onSearch={handleSearch}/>
       <FlatList 
       keyExtractor={item => item.id} 
-      data={music_data}
+      data={list}
       renderItem={renderMusic}
       ItemSeparatorComponent={renderSeperator}
       />
